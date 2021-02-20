@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Define a tool called circle that draws a filled circle when you drag. The center
+of the circle lies at the point where the drag or touch gesture starts, and its
+radius is determined by the distance dragged.
+-->
+
+<script src="./19_paint/code/chapter/19_paint.js"></script>
+
+<div></div>
+<script>
+  function circle(pos, state, dispatch) {
+    function drawCircle(newPos) {
+      let dx = newPos.x - pos.x;
+      let dy = newPos.y - pos.y;
+      let distanceBetween = Math.sqrt(dx*dx + dy*dy);
+      let radius = Math.ceil(distanceBetween);
+      let drawn = [];
+      for (let dy = -radius; dy <= radius; dy++) {
+        for (let dx = -radius; dx <= radius; dx++) {
+          distanceBetween = Math.ceil(Math.sqrt(dx*dx + dy*dy));
+          let y = pos.y + dy;
+          let x = pos.x + dx;
+          if (y >= state.picture.height || y < 0 || x >= state.picture.width || x < 0) continue;
+          if (distanceBetween <= radius) {
+            drawn.push({x, y, color: state.color});
+          }
+        }
+      }
+      dispatch({picture: state.picture.draw(drawn)});
+    }
+    drawCircle(pos);
+    return drawCircle;
+  }
+
+  let dom = startPixelEditor({
+    tools: Object.assign({}, baseTools, {circle})
+  });
+  document.querySelector("div").appendChild(dom);
+</script>
