@@ -1,6 +1,7 @@
 var {createServer} = require("http");
 var Router = require("./router");
 var ecstatic = require("ecstatic");
+var fs = require("fs");
 
 var router = new Router();
 var defaultHeaders = {"Content-Type": "text/plain"};
@@ -146,6 +147,19 @@ SkillShareServer.prototype.updated = function() {
   let response = this.talkResponse();
   this.waiting.forEach(resolve => resolve(response));
   this.waiting = [];
+  fs.writeFile("./talks.json", JSON.stringify(this.talks), e => {
+    if (e) throw e;
+  });
 };
 
-new SkillShareServer(Object.create(null)).start(8000);
+function loadTalks() {
+  let contents;
+  try {
+    contents = JSON.parse(fs.readFileSync("./talks.json", "utf8"));
+  } catch (e) {
+    contents = {};
+  }
+  return Object.assign(Object.create(null), contents);
+}
+
+new SkillShareServer(loadTalks()).start(8000);
