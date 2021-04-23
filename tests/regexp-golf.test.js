@@ -1,4 +1,4 @@
-const regex = require('../ch9-regex/regexp-golf')
+const regex = require('../ch09-regex/regexp-golf')
 
 test('test complex regular expressions', () => {
 

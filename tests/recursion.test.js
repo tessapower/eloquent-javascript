@@ -1,4 +1,4 @@
-const isEven = require('../ch3-functions/recursion');
+const isEven = require('../ch03-functions/recursion');
 
 test('Returns if a number is even', () => {
     expect(isEven(50)).toBe(true);

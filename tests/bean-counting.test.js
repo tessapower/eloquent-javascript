@@ -1,4 +1,4 @@
-const count = require('../ch3-functions/bean-counting');
+const count = require('../ch03-functions/bean-counting');
 
 test('Returns how frequently a character B appears in a string', () => {
     expect(count.countBs("BBC")).toBe(2);

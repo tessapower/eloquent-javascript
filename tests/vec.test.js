@@ -1,4 +1,4 @@
-const Vec = require('../ch6-objects/vec');
+const Vec = require('../ch06-objects/vec');
 
 test('Adds one 2D vector to another', () => {
     let vector = new Vec(1, 2);

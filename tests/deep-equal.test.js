@@ -1,4 +1,4 @@
-const compare = require('../ch4-objects-and-arrays/deep-equal');
+const compare = require('../ch04-objects-and-arrays/deep-equal');
 
 test('Returns true only if given values are the same value or are objects with the same properties, and the properties values are the same.', () => {
     let obj = {here: {is: "an"}, object: 2};

@@ -1,4 +1,4 @@
-const regex = require('../ch9-regex/quoting-style');
+const regex = require('../ch09-regex/quoting-style');
 
 let text = `'I'm the cook,' he said, 'it's my job.'`;
 

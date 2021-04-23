@@ -1,4 +1,4 @@
-const nums = require('../ch9-regex/numbers');
+const nums = require('../ch09-regex/numbers');
 
 test('tests if the regex matches to a JS style number', () => {
 

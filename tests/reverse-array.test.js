@@ -1,4 +1,4 @@
-const reverse = require('../ch4-objects-and-arrays/reverse-array');
+const reverse = require('../ch04-objects-and-arrays/reverse-array');
 
 test('Returns an array with the elements reversed.', () => {
     expect(reverse.reverseArray(['A', 'B', 'C'])).toStrictEqual(['C', 'B', 'A']);

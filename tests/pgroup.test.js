@@ -1,4 +1,4 @@
-const { PGroup } = require('../ch7-project-robot/pgroup');
+const { PGroup } = require('../ch07-project-robot/pgroup');
 
 test('add new values to empty PGroup', () => {
     let a = PGroup.empty.add("a");

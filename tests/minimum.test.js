@@ -1,4 +1,4 @@
-const min = require('../ch3-functions/minimum');
+const min = require('../ch03-functions/minimum');
 
 test('Returns the smaller of two whole numbers', () => {
     expect(min(0, 10)).toBe(0);

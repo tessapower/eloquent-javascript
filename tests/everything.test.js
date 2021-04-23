@@ -1,4 +1,4 @@
-const check = require('../ch5-higher-order-functions/everything');
+const check = require('../ch05-higher-order-functions/everything');
 
 test('Returns true if every element in an array returns true for a given function', () => {
     expect(check.every([1, 3, 5], n => n < 10)).toBe(true);

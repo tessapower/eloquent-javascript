@@ -1,4 +1,4 @@
-const list = require('../ch4-objects-and-arrays/list');
+const list = require('../ch04-objects-and-arrays/list');
 
 test('Given an array, returns a list.', () => {
     expect(list.arrayToList([10, 20])).toEqual({value: 10, rest: {value: 20, rest: null}});

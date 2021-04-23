@@ -1,4 +1,4 @@
-const { Grp, Group } = require('../ch6-objects/groups');
+const { Grp, Group } = require('../ch06-objects/groups');
 
 test('Create a new set of values', () => {
     let group1 = Group.from([10, 20]);

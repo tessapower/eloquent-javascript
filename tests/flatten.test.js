@@ -1,4 +1,4 @@
-const flatten = require('../ch5-higher-order-functions/flattening');
+const flatten = require('../ch05-higher-order-functions/flattening');
 
 test ('Returns a single array has all the elements of the original passed arrays.', () => {    
     let arrays = [[1, 2, 3], [4, 5], [6]];

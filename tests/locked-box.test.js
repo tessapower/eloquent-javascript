@@ -1,4 +1,4 @@
-const lockedBox = require('../ch8-bugs/locked-box')
+const lockedBox = require('../ch08-bugs/locked-box')
 
 test('box is locked even after throwing error', () => {
   expect(() => {
